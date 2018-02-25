@@ -170,7 +170,7 @@ body{
 .titlesousuo{
 	width: 100%;
 	height: 38px;
-	/*background-color: red;*/
+	background-color: white;
 }
 .titlesousuo_main{
 	width: 1190px;
@@ -233,7 +233,7 @@ body{
 .midbanner{
 	width: 100%;
 	height: 440px;
-	background-color:#eee;
+	background-color:#C21238;
 
 }
 .midbanner-content{
@@ -241,13 +241,13 @@ body{
 	height: 440px;
 	/*float: left;*/
 	margin: 0 auto;
-	background-color: white;
+	/*background-color: white;*/
 }
 
 .midbanner_main{
 	width: 1000px;
 	height: 100%;
-	background-color: green;
+	/*background-color: green;*/
 	margin: 0 auto;
 	float: left;
 }
@@ -320,9 +320,10 @@ body{
 }
 .midbanner_main_right{
 	width: 170px;
-	height: 100%;
-	background-color: pink;
+	height: 430px;
+	background-color: white;
 	float: left;
+	margin-top: 5px;
 }
 
 .midbanner_left{
@@ -409,11 +410,11 @@ body{
 .userinfo{
 	width: 170px;
 	height:169px;
-	background-color: pink;
+	/*background-color: pink;*/
 	display: block;
 	text-align: center;
 	font-size: 12px;
-	border: 1px solid green;
+	border-bottom:  1px solid #eee;
 
 }
 .hi{
@@ -434,20 +435,24 @@ body{
 .xinren{
 	width: 68px;
 	height: 20px;
-	border: 1px solid green;
+	border: 1px solid #F90;
 	margin:auto 10px ;
 	float: left;
 	line-height: 20px;
+	color:#F90;
+	cursor:pointer;
 
 }
 .huiyuan{
-	width: 70px;
-	height: 22px;
-	/*border: 1px solid pink;*/
-	background-color: red;
+	width: 68px;
+	height: 20px;
+	border: 1px solid #FFCB7F;
+	background-color: #FFDEAC;
 	float: left;
 	margin-right: 10px;
 	line-height: 22px;
+	color:#F90;
+	cursor:pointer;
 
 
 }
@@ -461,7 +466,7 @@ body{
 	font-family:'iconfont';
 	margin-left: 10px;
 	margin-right: 10px;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	margin-top: 39px;
 
 
@@ -470,16 +475,22 @@ body{
 	width: 70px;
 	height: 16px;
 	margin-right: 10px;
-	background-color: blue;
+	/*background-color: blue;*/
 	float: left;
 	text-align: center;
+	
 }
 .lzright{
 	height: 16px;
 	width: 70px;
-	background-color: green;
+	/*background-color: green;*/
 	float: left;
+	
 
+}
+.lzright:hover ,.lzleft:hover{
+	cursor: pointer;
+	color: #f60;
 }
 .lanzuan p{
 	float: left;
@@ -490,9 +501,10 @@ body{
 .uf1{
 	width: 150px;
 	height:97px;
-	background-color: red;
+	/*background-color: red;*/
 	display: block;
-	margin:9px 10px;
+	margin:0px 10px;
+	border-bottom: 0px;
 
 
 }
@@ -506,6 +518,7 @@ body{
 }
 .uf1 p:hover{
 	color: #FF9900;
+	cursor: pointer;
 }
 .uf1 span:hover{
 	color: #FF9900;
@@ -514,15 +527,15 @@ body{
 	height:145px;
 	/*background-color: yellow;*/
 	display: block;
-	margin-top: 10px;
+	/*margin-top: 10px;*/
 	/*margin-top: 20px;*/
 }
 .life{
 	width: 56px;
 	height: 70px;
-	border-top: 1px solid green;
+	border-top: 1px solid #eee;
 	/*border-bottom:1px solid green; */
-	border-right:1px solid green;
+	border-right:1px solid #eee;
 	float: left;
 	text-align: center;
 	font-size: 12px;
@@ -1165,14 +1178,14 @@ body{
 .content3left{
 	width: 800px;
 	float: left;
-	background-color: yellow;
+	/*background-color: yellow;*/
 
 }
 .content3right{
 	width: 390px;
 	height: 530px;
 	float: left;   
-	background-color: plum;
+	/*background-color: plum;*/
 }             
 .content3left_item1{               
 	width: 390px;
@@ -1352,7 +1365,7 @@ body{
 	width: 100%;
 	height: 100px;
 	margin-top: 20px;
-	background-color: red;
+	/*background-color: red;*/
 	float: left;
 }
 .content4_item img{
@@ -1863,4 +1876,36 @@ body{
 .left_img img{
 	width: 190px;
 	height: 360px;
+}
+.qingdan_content img:hover, .ylitem:hover img{
+	transform: scale(1.05,1.05);
+	transition:transform 0.5s;
+}
+.content3left_item1:hover img{
+	transform: translateX(-10px);
+	transition:transform 0.5s;
+}
+.right_bottom:hover img{
+	transform: translateX(-10px);
+	transition:transform 0.5s;
+}
+.left_item1:hover img, .left_content2_left:hover img, .jhleftitem1img:hover{
+	transform: scale(1.05,1.05);
+	transition:transform 0.5s;
+
+}
+.left_item1:hover, .left_content2_left:hover, .jhleftitem1img:hover{
+	cursor: pointer;
+}
+.ylitem:hover .yltitle, .fm_wz1:hover, .fm_content_item2 a:hover{
+	color: #F60;
+	cursor: pointer;
+}
+.title2 span:hover, .sousuo_wenzi p:hover {
+	cursor: pointer;
+	color: #F60;
+}
+.content3right_shipin img{
+	width: 390px;
+	height: 227px;
 }
