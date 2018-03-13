@@ -7,6 +7,34 @@
   url('https://at.alicdn.com/t/font_561407_we8i1ec7vrseb3xr.ttf') format('truetype'),
   url('https://at.alicdn.com/t/font_561407_we8i1ec7vrseb3xr.svg#iconfont') format('svg');
 }
+.imgbox{
+	width: 830px;
+	height: 440px;
+	position: relative;
+
+}
+.imgbox li{
+	width: 830px;
+	height: 440px;
+	position: absolute;
+	top:0;
+	left: 0;
+	transition: all 1s;
+	/*opacity: 0;*/
+
+
+
+}
+.active{
+	
+	z-index: 9;
+	opacity: 1;
+}
+.bannerquan .item4{
+	background: #FF9900;
+	z-index: 599;
+}
+
 .head{
 	width: 100%;
 	height: 36px;
@@ -175,7 +203,7 @@ body{
 .titlesousuo_main{
 	width: 1190px;
 	height: 38px;
-	background-color: green;
+	/*background-color: green;*/
 	/*margin-left: 80px;
 	*/
 	margin:0 auto;
@@ -212,7 +240,7 @@ body{
 .titlesousuo_main_right{
 	width: 1000px;
 	height: 38px;
-	background-color: red;
+	/*background-color: red;*/
 	float: left;
 
 }
@@ -233,7 +261,7 @@ body{
 .midbanner{
 	width: 100%;
 	height: 440px;
-	background-color:#C21238;
+	/*background-color:#C21238;*/
 
 }
 .midbanner-content{
@@ -241,6 +269,7 @@ body{
 	height: 440px;
 	/*float: left;*/
 	margin: 0 auto;
+	position: relative;
 	/*background-color: white;*/
 }
 
@@ -289,23 +318,27 @@ body{
 	left: 0;
 	right: 0;
 	bottom: 20px;
-
+	z-index: 99;
 	margin: auto;
 }
 .quan_item{
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
-	background-color: #D7CBF2;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #F2F2F2;
 	margin-left: 8px;
 	float: left;
+	transition: all 0.8s;
+	cursor: pointer;
+	border: 2px solid #C0C0C0;
+
 }
 .quan_item:hover{
 	background-color: #EE8A03;	
 }
-/*.item4{
+.quan_item .item4{
 	background-color: #EE8A03;	
-}*/
+}
 
 .dwtu_wenzi1{
 	position: absolute;
@@ -343,7 +376,8 @@ body{
 	width: 190px;
 	height: 100%;
 	float: left;
-	background-color: yellow;
+	background-color: black;
+	color:white;
 }
 .midbanner_btn1{
 	color: white;
@@ -351,7 +385,7 @@ body{
 .wuxuliebiao{
 	width: 190px;
 	height: 440px;
-	background-color: red;
+	/*background-color: red;*/
 	text-align: center;
 	line-height: 32px;
     font-family: 'iconfont';
@@ -365,6 +399,7 @@ body{
 }
 .wuxuliebiao li:hover{
 	background-color: white;
+	color:black;
 
 
 }
@@ -380,11 +415,14 @@ body{
 .midbanner_leftbtn{
 	width: 30px;
 	height:70px;
-	background-color:#F7D6D8;
+	/*background-color:#F7D6D8;*/
+	background-color:#C6C1C1;
 	opacity: 0;
 	float: left;
 	position: absolute;
 	top:180px;
+	z-index: 299;
+	cursor: pointer;
 	
 
 }
@@ -678,6 +716,7 @@ body{
 	left: 0;
 	top:80px;
 	z-index: 999;
+	cursor: pointer;
 	
 	
 }
@@ -707,7 +746,7 @@ body{
 	right: 0;
 	top:80px;
 	z-index: 999;
-	
+	cursor: pointer;
 	
 
 }
@@ -1318,7 +1357,7 @@ body{
 .content3right_bottom{
 	width: 100%;
 	height: 73px;
-	background-color:green;
+	/*background-color:green;*/
 }
 .content3right_bottom_item1 img{
 	width: 128px;
@@ -1768,10 +1807,13 @@ body{
 	border-bottom: 1px solid #EAEAEA;
 }
 .fm_item{
-	width: 238px;
+	width: 255px;
 	height: 48px;
 	/*background-color: plum;*/
 	float: left;
+}
+.item27{
+	width: 170px;
 }
 .fm_item img{
 	width: 48px;
@@ -1779,7 +1821,7 @@ body{
 	float: left;
 }
 .fm_wz{
-	width: 190px;
+	/*width: 190px;*/
 	float: left;
 }
 .fm_wz1{
@@ -1801,10 +1843,13 @@ body{
 	/*background-color: green;*/
 }
 .fm_content1{
-	width: 198px;
+	width: 218px;
 	height: 180px;
 	/*background-color: pink;*/
 	float: left;
+}
+.item26{
+	width: 100px;
 }
 .fm_content_item1{
 	width: 198px;
@@ -1842,6 +1887,12 @@ body{
 	background-color:white;
 	float: left;
 
+}
+.bottom a{
+	color:#332323;
+}
+.foot a{
+	color:#332323;
 }
 .bottom_con{
 	width: 1190px;
@@ -1908,4 +1959,178 @@ body{
 .content3right_shipin img{
 	width: 390px;
 	height: 227px;
+}
+.sousuo_kuang input{
+	width: 420px;
+	height: 34px;
+	border:0;
+	text-align: center;
+	font-family: 'iconfont';
+}
+.topBar{
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index: 200;
+	display: none;
+}
+.tBcontent{
+	width: 1190px;
+	height: 100%;
+	/*background-color:green;*/
+	margin: 0 auto;
+}
+.tbleft{
+	font-family: 'iconfont';
+	width: 190px;
+	height: 38px;
+	background-color: #FF9900;
+	color:white;
+	margin-top: 7px;
+	float: left;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.tbleft p{
+	margin-left: 10px;
+}
+.tbct{
+	width: 540px;
+	height: 40px;
+	background-color:#FF9900;
+	margin-left: 190px;
+	float: left;
+	margin-top: 5px;
+}
+.tbct input{
+	width: 428px;
+	height: 36px;
+	border:0;
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 2px;
+	font-family: 'iconfont';
+	font-size: 12px;
+	color:#cad5d6;
+
+
+
+}
+.tbct span{
+	float: right;
+	font-size: 18px;
+	color:white;
+	margin-right: 37px;
+	line-height: 40px;
+	font-weight: bold;
+	
+}
+
+.tbright{
+	width: 221px;
+	height: 100%;
+	/*background-color: yellow;*/
+	float: right;
+	font-size: 2px;
+	line-height: 50px;
+	padding-left: 47px;
+	font-family: 'iconfont';
+}
+.tbright a i{
+	color:#FF9900;
+
+}
+.tbright span{
+	
+	color:#FF9900;;
+}
+.ka{
+	width: 971px;
+	height: 440px;
+	background: red;
+	position: absolute;
+	top:0;
+	left:190px;
+	z-index: 120;
+	padding-left: 28px;
+	/*display: none;*/
+}
+.wuxuliebiao li:hover .ka{
+	display: block;
+}
+.ka_top{
+	width: 100%;
+	height: 36px;
+	background-color:green;
+
+}
+.ka_top span{
+	margin-right: 25px;
+	padding: 6px 8px;
+	background-color: #FF9900;
+	line-height: 36px;
+	/*display: /*/
+	/*float: left;*/
+
+}
+.leftBar{
+	width: 68px;
+	height: 317px;
+	border:1px solid #DDDDDD;
+	/*background: green;*/
+	position: fixed;
+	left: 5px;
+	top:0;
+	bottom: 0;
+	z-index: 200;
+	display: none;
+	margin:auto;
+}
+.leftBar span{
+	height: 28px;
+	/*padding:9px 10px 9px 9px;*/
+	padding:6px 10px ;
+	font-size: 12px;
+	line-height: 29px;
+	border-bottom: 1px solid #DDDDDD;
+	cursor: pointer;
+}
+.leftitem{
+	margin-top: 9px;
+}
+.item16{
+	cursor: pointer;
+	height: 16px;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+}
+/*.leftBar span:hover{
+	background-color: #FF9900;
+}*/
+.item16:hover{
+	background-color: #FF9900;
+}
+.lfactive{
+	background-color: #FF9900;
+}
+.jhlist{
+	width: 1000px;
+	height: 240px;
+	overflow: hidden;
+
+}
+.jhinner{
+	width: 4000px;
+	height: 240px;
+	/*background-color: green;*/
+	transition: all 1s;
+}
+
+.juhuocontent_left .disable {
+	color: #E0E0E0;
 }
