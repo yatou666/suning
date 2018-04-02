@@ -63,9 +63,6 @@
 	let browerheight=document.documentElement.clientHeight
 	const topBar=document.querySelector(".topBar");
 	const leftBar=document.querySelector(".leftBar");
-	// console.log(topBar);
-	// console.log(browerheight);
-	// console.log(browerwidth);
 	window.onscroll=function(){
 		let st=document.documentElement.scrollTop;
 		// console.log(st);
@@ -132,7 +129,7 @@
 		let st=document.documentElement.scrollTop;
 		let obj=tips[0];
 		for(let i=0; i<containers.length;i++){
-			if(st>containers[i].offsetTop-80){
+			if(st>containers[i].offsetTop-50){
 				for(let i=0;i<tips.length;i++){
 					 tips[i].classList.remove("lfactive");
 				}
@@ -147,35 +144,137 @@
 
 	
 }
-// 大聚会部分
+// 大聚会部分   无缝轮播
 {
 	const jhprev=document.querySelector(".jhbtnleft");
 	const jhnext=document.querySelector(".jhbtnright");
 	const jhinner=document.querySelector(".jhinner");
 	
-	let m=0;
+	let m=1;
+	let flag=true;
+
 	jhnext.onclick=function(){
-		m++;
-		jhprev.classList.remove("disable");
-		if(m===2){
-			this.classList.add("disable");
-		}
-		if(m===3){
-			m=2;
-			return;//终止函数的执行
-		}
-		jhinner.style.marginLeft=-1000*m+"px";
-	}
+		if(flag){
+			flag=false;
+			m++;
+			jhinner.style.transition="all .5s";
+			jhinner.style.marginLeft=-1000*m+"px";
+		}		
+	}		
 	jhprev.onclick=function(){
-		m--;
-		jhnext.classList.remove("disable");
-		if(m===0){
-			jhprev.classList.add("disable");
-		}
-		if(m===-1){
-			m=0;
-			return;
-		}
-		jhinner.style.marginLeft=-1000*m+"px";
+		if(flag){
+			flag=false;
+			m--;			
+			jhinner.style.transition="all .5s";
+			jhinner.style.marginLeft=-1000*m+"px";
+		}		
 	}
+	
+	jhinner.addEventListener("transitionend",function(){
+		flag=true;
+		if(m===0){
+			jhinner.style.transition="none";
+			jhinner.style.marginLeft=-3000+"px";
+			m=3;
+		}
+		if(m===4){
+			jhinner.style.transition="none";
+			jhinner.style.marginLeft=-1000+"px";
+			m=1;
+		}
+	});
+		
 }
+
+
+//排行榜部分开始
+{
+
+    const phleftbtn = document.querySelector(".phleftbtn");
+    const phrightbtn = document.querySelector(".phrightbtn");
+    const phinner = document.querySelector(".phinner");
+    const phbtns = document.querySelectorAll(".phtnitem");
+    let flag=true;
+
+    var m = 1;
+    phleftbtn.onclick = function () {
+    	if(flag){
+    		flag=false;
+    		 m--;
+	        phinner.style.transition="all .5s";
+	        phinner.style.marginLeft = -390 * m + "px";
+	        for(let i=0;i<phbtns.length;i++){
+	            phbtns[i].classList.remove("phactive");
+	            phbtns[i-1].classList.add("phactive");
+	        }
+    	}
+       
+
+
+    }
+
+    phrightbtn.onclick = function () {
+    	if(flag){
+    		flag=false;
+    		 m++;
+	        phinner.style.transition="all .5s";
+	        phinner.style.marginLeft = -390 * m + "px";
+	        //phbtns[m-1].classList.add("phactive");
+	    	}
+	       
+    }
+
+    phinner.addEventListener("transitionend",function(){
+    	flag=true;
+        if(m===4){
+            phinner.style.transition="none";
+            phinner.style.marginLeft=-390+"px";
+            m=1;
+        }
+        if(m===0){
+            phinner.style.transition="none";
+            phinner.style.marginLeft=-1170+"px";
+            m=3;
+        }
+    })
+
+    phbtns.forEach(function(ele,index){
+        ele.onmouseenter=function(){
+            for(let i=0;i<phbtns.length;i++){
+                phbtns[i].classList.remove("phactive");//的类名移除
+            }
+            phinner.style.marginLeft=(index+1)*-390+"px";
+            phinner.style.transition="all 0.5s";
+                console.log( phinner.style.marginLeft);
+            //ele this pagers[index]
+            this.classList.add("phactive");
+
+
+        }
+    });
+
+}
+
+//顶部导航部分
+
+
+$(".topxiala").each(function (index,ele) {
+	$(this).mouseenter(function () {
+        $(".aa").eq(index).css("display","block");
+    })
+
+    $(this).mouseleave(function () {
+        $(".aa").eq(index).css("display","none");
+    })
+})
+
+//右侧导航
+$(".message").each(function (index,ele) {
+    $(this).mouseenter(function () {
+        $(".rignthide").eq(index).css("display","block");
+        // $(".rignthide").eq(index).css("left","-150");
+    })
+    $(this).mouseleave(function () {
+        $(".rignthide").eq(index).css("display","none");
+    })
+})
