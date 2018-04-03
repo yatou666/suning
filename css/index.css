@@ -6,6 +6,9 @@
   url('https://at.alicdn.com/t/font_561407_bdt39a2xjb2csor.ttf') format('truetype'),
   url('https://at.alicdn.com/t/font_561407_bdt39a2xjb2csor.svg#iconfont') format('svg');
 }
+body{
+	overflow-x: hidden;
+}
 .imgbox{
 	width: 830px;
 	height: 440px;
@@ -61,7 +64,9 @@
 	font-family:'iconfont'; 
 	color: #666;
 	position: relative;
+	cursor: pointer;
 }
+
 .leftwenzi p{
 	float:left;
 	
@@ -424,6 +429,7 @@ body{
 	top:180px;
 	z-index: 299;
 	cursor: pointer;
+	user-select:none;
 	
 
 }
@@ -607,7 +613,6 @@ body{
 .content{
 	width: 1190px;
 	margin: 0 auto;
-
 	background:#F2F2F2;
 }
 .content img{
@@ -2062,7 +2067,7 @@ body{
 	width: 68px;
 	height: 317px;
 	border:1px solid #DDDDDD;
-	/*background: green;*/
+	background: #F8F8F8;
 	position: fixed;
 	left: 5px;
 	top:0;
@@ -2232,6 +2237,7 @@ body{
 	line-height: 30px;
 	margin-bottom: 8px;
 	height: 30px;
+	cursor: pointer;
 	/*float: right;*/
 }
 .message p{
@@ -2477,13 +2483,22 @@ color:#F60;
     font-size: 16px;
     /*margin-bottom: 10px;*/
     position: relative;
+    z-index: 222;
+}
+.message:hover{
+	background-color: #FDA904;
+	color:white;
 }
 .rignthide{
-    width: 70px;
+    width: 0;
+    /*width: 70px;*/
     background:#fda904;
     position: absolute;
-    left: -70px;
-    display: none;
+    left: 33px;
+    /*display: block;*/
+    /*opacity: 0;*/
+    z-index: 210;
+    overflow: hidden;
 }
 .righthidemid{
     height: 140px;
